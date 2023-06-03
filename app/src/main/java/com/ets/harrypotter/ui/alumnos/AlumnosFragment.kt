@@ -1,6 +1,8 @@
 package com.ets.harrypotter.ui.alumnos
 
+import android.graphics.Path.Direction
 import android.os.Bundle
+import android.telephony.mbms.DownloadRequest
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -32,6 +34,7 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAlumnosBinding.bind(view)
 
+
         hpViewMoodel.fetchAlumnos().observe(viewLifecycleOwner, Observer { result ->
             when(result){
                 is Results.Loading -> Log.d("LiveData", "Loading ...")
@@ -41,6 +44,8 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
                     binding.rvAlumnos.layoutManager = GridLayoutManager(requireContext(),3)
                     binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data){
                         Toast.makeText(requireContext(),"${it.alternate_names}",Toast.LENGTH_LONG).show()
+
+
                     }
                 }
 
