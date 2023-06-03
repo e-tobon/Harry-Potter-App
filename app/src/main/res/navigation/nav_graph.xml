@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/alumnosFragment"
-        android:name="com.ets.harrypotter.ui.AlumnosFragment"
+        android:name="com.ets.harrypotter.ui.alumnos.AlumnosFragment"
         android:label="fragment_alumnos"
         tools:layout="@layout/fragment_alumnos" />
 </navigation>

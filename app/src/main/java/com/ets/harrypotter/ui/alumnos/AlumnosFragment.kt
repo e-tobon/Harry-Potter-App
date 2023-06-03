@@ -1,4 +1,4 @@
-package com.ets.harrypotter.ui
+package com.ets.harrypotter.ui.alumnos
 
 import android.os.Bundle
 import android.util.Log

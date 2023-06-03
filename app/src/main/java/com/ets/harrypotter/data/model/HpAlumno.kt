@@ -8,7 +8,5 @@ data class HpAlumno(
     val house: String?
 )
 
-data class AlumnoList(
-    val result: List<HpAlumno> = listOf()
-)
+
 

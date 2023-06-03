@@ -1,9 +1,7 @@
 package com.ets.harrypotter.repository
 
-import com.ets.harrypotter.data.model.AlumnoList
 import com.ets.harrypotter.data.model.HpAlumno
 import com.ets.harrypotter.data.model.HpProfesor
-import com.ets.harrypotter.data.model.ProfesoresList
 import com.ets.harrypotter.utils.AppConstants
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

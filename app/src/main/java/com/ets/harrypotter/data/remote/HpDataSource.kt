@@ -1,9 +1,7 @@
 package com.ets.harrypotter.data.remote
 
-import com.ets.harrypotter.data.model.AlumnoList
 import com.ets.harrypotter.data.model.HpAlumno
 import com.ets.harrypotter.data.model.HpProfesor
-import com.ets.harrypotter.data.model.ProfesoresList
 import com.ets.harrypotter.repository.WebService
 
 class HpDataSource(private val webService: WebService) {
