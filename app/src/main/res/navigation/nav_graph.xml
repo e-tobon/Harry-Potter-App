@@ -18,5 +18,13 @@
         <action
             android:id="@+id/action_selectionFragment_to_alumnosFragment"
             app:destination="@id/alumnosFragment" />
+        <action
+            android:id="@+id/action_selectionFragment_to_profesoresFragment"
+            app:destination="@id/profesoresFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/profesoresFragment"
+        android:name="com.ets.harrypotter.ui.profesores.ProfesoresFragment"
+        android:label="fragment_profesores"
+        tools:layout="@layout/fragment_profesores" />
 </navigation>

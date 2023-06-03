@@ -19,7 +19,19 @@ class HpViewModel(private val repo:HpRepository):ViewModel() {
             }
         }
 
+    fun fetchProfesores() =
+        liveData(Dispatchers.IO) {
+            emit(Results.Loading())
+            try {
+                emit(Results.Success(repo.getProfesores()))
+            }catch (e:Exception){
+                emit(Results.Failure(e))
+            }
+        }
+
 }
+
+
 
 class HPViewModelFactory(private val repo: HpRepository): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

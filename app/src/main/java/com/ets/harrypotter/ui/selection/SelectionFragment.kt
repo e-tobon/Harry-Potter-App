@@ -25,5 +25,9 @@ class SelectionFragment : Fragment(R.layout.fragment_selection) {
         binding.ivAlumnos.setOnClickListener{
             findNavController().navigate(R.id.action_selectionFragment_to_alumnosFragment)
         }
+
+        binding.ivProfesores.setOnClickListener{
+            findNavController().navigate(R.id.action_selectionFragment_to_profesoresFragment)
+        }
     }
 }
