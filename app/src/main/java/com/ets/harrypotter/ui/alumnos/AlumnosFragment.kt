@@ -34,7 +34,10 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
             when(result){
                 is Results.Loading -> Log.d("LiveData", "Loading ...")
 
-                is Results.Success -> Log.d("LiveData","${result.data.toString()}")
+                is Results.Success ->{
+                    Log.d("LiveData","${result.data.toString()}")
+                    binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data)
+                }
 
                 is Results.Failure -> Log.d("Live Data", "${result.exception}")
             }

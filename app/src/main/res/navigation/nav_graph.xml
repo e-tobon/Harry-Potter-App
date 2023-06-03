@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/alumnosFragment">
+    app:startDestination="@id/selectionFragment">
 
     <fragment
         android:id="@+id/alumnosFragment"
         android:name="com.ets.harrypotter.ui.alumnos.AlumnosFragment"
         android:label="fragment_alumnos"
         tools:layout="@layout/fragment_alumnos" />
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="com.ets.harrypotter.ui.selection.SelectionFragment"
+        android:label="fragment_selection"
+        tools:layout="@layout/fragment_selection" >
+        <action
+            android:id="@+id/action_selectionFragment_to_alumnosFragment"
+            app:destination="@id/alumnosFragment" />
+    </fragment>
 </navigation>
