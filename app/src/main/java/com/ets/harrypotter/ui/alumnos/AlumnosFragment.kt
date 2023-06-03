@@ -3,6 +3,7 @@ package com.ets.harrypotter.ui.alumnos
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -38,7 +39,9 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
                 is Results.Success ->{
                     Log.d("LiveData","${result.data.toString()}")
                     binding.rvAlumnos.layoutManager = GridLayoutManager(requireContext(),3)
-                    binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data)
+                    binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data){
+                        Toast.makeText(requireContext(),"${it.alternate_names}",Toast.LENGTH_LONG).show()
+                    }
                 }
 
                 is Results.Failure -> Log.d("Live Data", "${result.exception}")

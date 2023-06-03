@@ -9,7 +9,11 @@
         android:id="@+id/alumnosFragment"
         android:name="com.ets.harrypotter.ui.alumnos.AlumnosFragment"
         android:label="fragment_alumnos"
-        tools:layout="@layout/fragment_alumnos" />
+        tools:layout="@layout/fragment_alumnos" >
+        <action
+            android:id="@+id/action_alumnosFragment_to_alumnoDetailFragment"
+            app:destination="@id/alumnoDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/selectionFragment"
         android:name="com.ets.harrypotter.ui.selection.SelectionFragment"
@@ -27,4 +31,9 @@
         android:name="com.ets.harrypotter.ui.profesores.ProfesoresFragment"
         android:label="fragment_profesores"
         tools:layout="@layout/fragment_profesores" />
+    <fragment
+        android:id="@+id/alumnoDetailFragment"
+        android:name="com.ets.harrypotter.ui.alumnos.AlumnoDetailFragment"
+        android:label="fragment_alumno_detail"
+        tools:layout="@layout/fragment_alumno_detail" />
 </navigation>

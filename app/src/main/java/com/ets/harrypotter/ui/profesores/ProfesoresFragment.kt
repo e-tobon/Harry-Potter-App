@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -40,7 +41,9 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
                 is Results.Loading -> Log.d("LiveDataP","Loading...")
                 is Results.Success -> {
                     binding.rvProfesores.layoutManager = GridLayoutManager(requireContext(),3)
-                    binding.rvProfesores.adapter = ProfesresAdapter(requireContext(),result.data)
+                    binding.rvProfesores.adapter = ProfesresAdapter(requireContext(),result.data){
+                        Toast.makeText(requireContext(),"${result.data}",Toast.LENGTH_LONG).show()
+                    }
                 }
                 is Results.Failure -> {
                     Log.d("LiveDataP","${result.exception}")

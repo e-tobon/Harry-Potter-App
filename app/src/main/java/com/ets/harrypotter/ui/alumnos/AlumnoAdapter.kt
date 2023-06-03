@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.ets.harrypotter.data.model.HpAlumno
 import com.ets.harrypotter.databinding.AlumnoItemBinding
 
-class AlumnoAdapter(private val context: Context, private val alumnoList:List<HpAlumno>) : RecyclerView.Adapter<AlumnoAdapter.ViewHolder>() {
+class AlumnoAdapter(private val context: Context, private val alumnoList:List<HpAlumno>, private val alumnoClick:(HpAlumno)->Unit) : RecyclerView.Adapter<AlumnoAdapter.ViewHolder>() {
     class ViewHolder(view:AlumnoItemBinding): RecyclerView.ViewHolder(view.root){
         val tvNombre = view.tvName
         val tvActor = view.tvActor
@@ -32,6 +32,9 @@ class AlumnoAdapter(private val context: Context, private val alumnoList:List<Hp
         holder.tvHouse.text = alumnoList[position].house
         Glide.with(context).load(alumnoList[position].image)
             .into(holder.ivImagen)
+        holder.itemView.setOnClickListener {
+            alumnoClick(alumnoList[position])
+        }
 
     }
 }
