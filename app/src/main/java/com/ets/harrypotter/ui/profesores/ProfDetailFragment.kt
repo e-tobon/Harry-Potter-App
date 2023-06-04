@@ -1,4 +1,4 @@
-package com.ets.harrypotter.ui.alumnos
+package com.ets.harrypotter.ui.profesores
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,22 +7,23 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import com.ets.harrypotter.R
-import com.ets.harrypotter.databinding.FragmentAlumnoDetailBinding
+import com.ets.harrypotter.databinding.FragmentProfDetailBinding
 import com.ets.harrypotter.presentation.MainViewModel
 
 
-class AlumnoDetailFragment : Fragment(R.layout.fragment_alumno_detail) {
+class ProfDetailFragment : Fragment(R.layout.fragment_prof_detail) {
+
     private val mainViewModel:MainViewModel by activityViewModels()
-    private lateinit var binding: FragmentAlumnoDetailBinding
+    private lateinit var binding:FragmentProfDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentAlumnoDetailBinding.bind(view)
-        Toast.makeText(requireContext(),"${mainViewModel.alumnos.value}",Toast.LENGTH_LONG).show()
+        binding = FragmentProfDetailBinding.bind(view)
+        Toast.makeText(requireContext(),"${mainViewModel.profesor.value}",Toast.LENGTH_SHORT).show()
     }
+
 }

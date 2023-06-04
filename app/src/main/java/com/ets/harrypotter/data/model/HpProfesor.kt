@@ -11,7 +11,7 @@ data class HpProfesor(
     val dateOfBirth: String?,
     val yearOfBirth:String?,
     val wand:WandProfesor?,
-    val patronus:String
+    val patronus:String?
 
 
 )

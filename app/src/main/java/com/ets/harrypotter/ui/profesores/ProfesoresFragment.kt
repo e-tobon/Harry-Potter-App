@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ets.harrypotter.R
 import com.ets.harrypotter.core.Results
@@ -16,12 +18,14 @@ import com.ets.harrypotter.data.remote.HpDataSource
 import com.ets.harrypotter.databinding.FragmentProfesoresBinding
 import com.ets.harrypotter.presentation.HPViewModelFactory
 import com.ets.harrypotter.presentation.HpViewModel
+import com.ets.harrypotter.presentation.MainViewModel
 import com.ets.harrypotter.repository.HpRepositoryImp
 import com.ets.harrypotter.repository.RetrofitClient
 
 
 class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
 
+    private val mainViewModel: MainViewModel by activityViewModels()
     private lateinit var binding: FragmentProfesoresBinding
 
     private val hpViewModel:HpViewModel by viewModels<HpViewModel> {
@@ -42,7 +46,11 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
                 is Results.Success -> {
                     binding.rvProfesores.layoutManager = GridLayoutManager(requireContext(),3)
                     binding.rvProfesores.adapter = ProfesresAdapter(requireContext(),result.data){
-                        Toast.makeText(requireContext(),"${result.data}",Toast.LENGTH_LONG).show()
+
+                        mainViewModel.setProfesores(it)
+                        Toast.makeText(requireContext(),"${mainViewModel.profesor.value}",Toast.LENGTH_LONG).show()
+                        findNavController().navigate(R.id.action_profesoresFragment_to_profDetailFragment)
+
                     }
                 }
                 is Results.Failure -> {

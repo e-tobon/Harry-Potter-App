@@ -32,38 +32,17 @@
         android:label="fragment_profesores"
         tools:layout="@layout/fragment_profesores" >
         <action
-            android:id="@+id/action_profesoresFragment_to_profesoresDetailFragment"
-            app:destination="@id/profesoresDetailFragment" />
+            android:id="@+id/action_profesoresFragment_to_profDetailFragment"
+            app:destination="@id/profDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/alumnoDetailFragment"
         android:name="com.ets.harrypotter.ui.alumnos.AlumnoDetailFragment"
         android:label="fragment_alumno_detail"
-        tools:layout="@layout/fragment_alumno_detail" >
-        <argument
-            android:name="casa"
-            app:argType="string" />
-        <argument
-            android:name="especie"
-            app:argType="string" />
-        <argument
-            android:name="genero"
-            app:argType="string" />
-        <argument
-            android:name="diaNacimiento"
-            app:argType="string" />
-        <argument
-            android:name="añoNacimiento"
-            app:argType="string" />
-        <argument
-            android:name="patronus"
-            app:argType="string" />
-        <argument android:name="varita" />
-        <argument android:name="nombresAlias" />
-    </fragment>
+        tools:layout="@layout/fragment_alumno_detail" />
     <fragment
-        android:id="@+id/profesoresDetailFragment"
-        android:name="com.ets.harrypotter.ui.profesores.ProfesoresDetailFragment"
-        android:label="fragment_profesores_detail"
-        tools:layout="@layout/fragment_profesores_detail" />
+        android:id="@+id/profDetailFragment"
+        android:name="com.ets.harrypotter.ui.profesores.ProfDetailFragment"
+        android:label="fragment_prof_detail"
+        tools:layout="@layout/fragment_prof_detail" />
 </navigation>
