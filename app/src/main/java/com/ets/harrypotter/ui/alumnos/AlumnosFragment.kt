@@ -6,6 +6,7 @@ import android.telephony.mbms.DownloadRequest
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -40,8 +41,12 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
         binding = FragmentAlumnosBinding.bind(view)
         hpViewMoodel.fetchAlumnos().observe(viewLifecycleOwner, Observer { result ->
             when(result){
-                is Results.Loading -> Log.d("LiveData", "Loading ...")
+                is Results.Loading -> {
+                    binding.pogressBar.isVisible = true
+                    Log.d("LiveData", "Loading ...")
+                }
                 is Results.Success ->{
+                    binding.pogressBar.isVisible = false
                     Log.d("LiveData","${result.data.toString()}")
                     binding.rvAlumnos.layoutManager = GridLayoutManager(requireContext(),3)
                     binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data){
@@ -50,7 +55,11 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
                     }
 
                 }
-                is Results.Failure -> Log.d("Live Data", "${result.exception}")
+
+                is Results.Failure -> {
+                    binding.pogressBar.isVisible = false
+                    Log.d("Live Data", "${result.exception}")
+                }
             }
         })
     }

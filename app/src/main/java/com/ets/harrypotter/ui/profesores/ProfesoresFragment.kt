@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ets.harrypotter.R
@@ -42,8 +44,12 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
 
         hpViewModel.fetchProfesores().observe(viewLifecycleOwner, Observer { result ->
             when(result){
-                is Results.Loading -> Log.d("LiveDataP","Loading...")
+                is Results.Loading -> {
+                    binding.pvVisible.isVisible = true
+                    Log.d("LiveDataP", "Loading...")
+                }
                 is Results.Success -> {
+                    binding.pvVisible.isVisible = false
                     binding.rvProfesores.layoutManager = GridLayoutManager(requireContext(),3)
                     binding.rvProfesores.adapter = ProfesresAdapter(requireContext(),result.data){
 
@@ -53,8 +59,11 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
                     }
                 }
                 is Results.Failure -> {
+                    binding.pvVisible.isVisible = false
                     Log.d("LiveDataP","${result.exception}")
                 }
+
+
             }
         })
 
