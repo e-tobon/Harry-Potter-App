@@ -27,6 +27,11 @@ class ProfDetailFragment : Fragment(R.layout.fragment_prof_detail) {
         binding = FragmentProfDetailBinding.bind(view)
         binding.tvEspecie.text = mainViewModel.profesor.value?.species.toString()
         binding.tvNombreResult.text = mainViewModel.profesor.value?.name.toString()
+        binding.tvCasa.text = mainViewModel.profesor.value?.house
+        binding.tvGenero.text = mainViewModel.profesor.value?.gender
+        binding.tvNacimiento.text = mainViewModel.profesor.value?.dateOfBirth
+        binding.tvWand.text = mainViewModel.profesor.value?.wand?.core
+        binding.tvPatronus.text = mainViewModel.profesor.value?.patronus
         Glide.with(requireContext()).load(mainViewModel.profesor.value?.image)
             .into(binding.ivImageResult)
 

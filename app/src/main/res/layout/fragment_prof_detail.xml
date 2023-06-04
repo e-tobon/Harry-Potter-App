@@ -57,7 +57,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,7 +69,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
-                        android:textColor="@color/black"
+                        android:textColor="#9C9C9C"
                         android:textSize="15dp"
                         android:text="Especie"/>
 
@@ -96,6 +97,200 @@
 
 
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="#9C9C9C"
+                        android:textSize="15dp"
+                        android:text="Genero"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tvGenero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        tools:text="Male" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="#9C9C9C"
+                        android:textSize="15dp"
+                        android:text="Nacimiento"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tvNacimiento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        tools:text="19-05-2023" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="#9C9C9C"
+                        android:textSize="15dp"
+                        android:text="Casa"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tvCasa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        tools:text="Howards" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="#9C9C9C"
+                        android:textSize="15dp"
+                        android:text="Varita"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tvWand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        tools:text="Wand" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="#9C9C9C"
+                        android:textSize="15dp"
+                        android:text="Genero"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/tvPatronus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/black"
+                        android:textSize="30dp"
+                        tools:text="Venado"
+                        android:layout_marginBottom="40dp"
+                        />
+
+
+
+                </LinearLayout>
+
 
             </LinearLayout>
 

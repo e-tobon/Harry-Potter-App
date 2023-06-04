@@ -48,7 +48,6 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
                     binding.rvProfesores.adapter = ProfesresAdapter(requireContext(),result.data){
 
                         mainViewModel.setProfesores(it)
-                        Toast.makeText(requireContext(),"${mainViewModel.profesor.value}",Toast.LENGTH_LONG).show()
                         findNavController().navigate(R.id.action_profesoresFragment_to_profDetailFragment)
 
                     }
