@@ -33,5 +33,10 @@ class AlumnoDetailFragment : Fragment(R.layout.fragment_alumno_detail) {
             .into(binding.ivImageResult)
         binding.tvWand.text = mainViewModel.alumnos.value?.wand?.core
         binding.tvPatronus.text = mainViewModel.alumnos.value?.patronus
+
+        if(mainViewModel.alumnos.value!!.alternate_names!!.isNotEmpty()){
+            binding.tvNombreAlias.text = mainViewModel.alumnos.value?.alternate_names!![0]
+        }
+
     }
 }

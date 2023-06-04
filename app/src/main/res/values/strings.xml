@@ -2,4 +2,14 @@
     <string name="app_name">harryPotter</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="estudiantes_de_hogwarts">Estudiantes de Hogwarts</string>
+    <string name="personal_de_hogwarts">Personal de Hogwarts</string>
+    <string name="daniel_recfield">Daniel Recfield</string>
+    <string name="especie">Especie</string>
+    <string name="genero">Genero</string>
+    <string name="nacimiento">Nacimiento</string>
+    <string name="casa">Casa</string>
+    <string name="varita">Varita</string>
+    <string name="patronus">Patronus</string>
+    <string name="especiee">Especie</string>
 </resources>

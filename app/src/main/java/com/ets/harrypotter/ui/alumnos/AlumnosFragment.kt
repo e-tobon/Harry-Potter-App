@@ -45,7 +45,6 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
                     Log.d("LiveData","${result.data.toString()}")
                     binding.rvAlumnos.layoutManager = GridLayoutManager(requireContext(),3)
                     binding.rvAlumnos.adapter = AlumnoAdapter(requireContext(),result.data){
-                        Toast.makeText(requireContext(),"${it.alternate_names}",Toast.LENGTH_LONG).show()
                         mainViewModel.setAlumnos(it)
                         findNavController().navigate(R.id.action_alumnosFragment_to_alumnoDetailFragment)
                     }

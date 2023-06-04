@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:textSize="12dp"
+        android:textSize="12sp"
         android:textStyle="bold"
 
         app:layout_constraintStart_toStartOf="@id/cvImageContainer"
@@ -44,9 +44,9 @@
         android:id="@+id/tvActor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Daniel Recfield"
+        tools:text="@string/daniel_recfield"
         app:layout_constraintTop_toBottomOf="@id/tvName"
-        android:textSize="10dp"
+        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@id/cvImageContainer"
         android:layout_marginBottom="30dp"/>
 

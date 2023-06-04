@@ -32,10 +32,10 @@
             android:textColor="@color/white"
             tools:text="Harry Potter"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ubuntu_bold"
-            android:textSize="40dp"/>
+            android:textSize="40sp"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -56,22 +56,22 @@
             android:verticalScrollbarPosition="left">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="30dp">
+                android:layout_marginStart="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Especie"/>
+                        android:textSize="15sp"
+                        android:text="@string/especie"/>
 
                 </LinearLayout>
 
@@ -86,12 +86,12 @@
                         android:id="@+id/tvEspecie"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="Humano" />
 
 
@@ -104,13 +104,13 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Genero"/>
+                        android:textSize="15sp"
+                        android:text="@string/genero"/>
 
                 </LinearLayout>
 
@@ -125,12 +125,12 @@
                         android:id="@+id/tvGenero"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="Male" />
 
 
@@ -142,13 +142,13 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Nacimiento"/>
+                        android:textSize="15sp"
+                        android:text="@string/nacimiento"/>
 
                 </LinearLayout>
 
@@ -163,12 +163,12 @@
                         android:id="@+id/tvNacimiento"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="19-05-2023" />
 
 
@@ -180,13 +180,13 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Casa"/>
+                        android:textSize="15sp"
+                        android:text="@string/casa"/>
 
                 </LinearLayout>
 
@@ -201,12 +201,12 @@
                         android:id="@+id/tvCasa"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="Howards" />
 
 
@@ -218,13 +218,13 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10sp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Varita"/>
+                        android:textSize="15sp"
+                        android:text="@string/varita"/>
 
                 </LinearLayout>
 
@@ -239,12 +239,12 @@
                         android:id="@+id/tvWand"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="Wand" />
 
 
@@ -256,13 +256,13 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginTop="40dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
-                        android:textSize="15dp"
-                        android:text="Patronus"/>
+                        android:textSize="15sp"
+                        android:text="@string/patronus"/>
 
                 </LinearLayout>
 
@@ -277,12 +277,12 @@
                         android:id="@+id/tvPatronus"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="20dp"
                         android:textAllCaps="true"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/black"
-                        android:textSize="30dp"
+                        android:textSize="30sp"
                         tools:text="Venado"
                         android:layout_marginBottom="40dp"
                         />
@@ -309,7 +309,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="90dp"
-        android:layout_marginRight="0dp"
+
 
         >
         <ImageView
@@ -317,7 +317,6 @@
             android:id="@+id/ivImageResult"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
             android:cropToPadding="true"
             android:foregroundGravity="right"
             android:scaleType="centerCrop"
