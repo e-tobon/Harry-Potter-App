@@ -262,7 +262,7 @@
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="#9C9C9C"
                         android:textSize="15dp"
-                        android:text="Genero"/>
+                        android:text="Patronus"/>
 
                 </LinearLayout>
 

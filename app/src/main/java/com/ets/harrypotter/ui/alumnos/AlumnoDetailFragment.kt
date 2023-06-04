@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import com.bumptech.glide.Glide
 import com.ets.harrypotter.R
 import com.ets.harrypotter.databinding.FragmentAlumnoDetailBinding
 import com.ets.harrypotter.presentation.MainViewModel
@@ -23,6 +24,14 @@ class AlumnoDetailFragment : Fragment(R.layout.fragment_alumno_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAlumnoDetailBinding.bind(view)
-        Toast.makeText(requireContext(),"${mainViewModel.alumnos.value}",Toast.LENGTH_LONG).show()
+        binding.tvNombreResult.text = mainViewModel.alumnos.value?.name
+        binding.tvEspecie.text = mainViewModel.alumnos.value?.species
+        binding.tvGenero.text = mainViewModel.alumnos.value?.gender
+        binding.tvCasa.text = mainViewModel.alumnos.value?.house
+        binding.tvNacimiento.text = mainViewModel.alumnos.value?.dateOfBirth
+        Glide.with(requireContext()).load(mainViewModel.alumnos.value?.image)
+            .into(binding.ivImageResult)
+        binding.tvWand.text = mainViewModel.alumnos.value?.wand?.core
+        binding.tvPatronus.text = mainViewModel.alumnos.value?.patronus
     }
 }
