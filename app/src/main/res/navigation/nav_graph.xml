@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/selectionFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/alumnosFragment"
@@ -45,4 +45,25 @@
         android:name="com.ets.harrypotter.ui.profesores.ProfDetailFragment"
         android:label="fragment_prof_detail"
         tools:layout="@layout/fragment_prof_detail" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ets.harrypotter.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_selectionFragment"
+            app:destination="@id/selectionFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.ets.harrypotter.ui.login.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

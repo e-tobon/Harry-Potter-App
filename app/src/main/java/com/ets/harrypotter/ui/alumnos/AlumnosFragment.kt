@@ -59,6 +59,7 @@ class AlumnosFragment : Fragment(R.layout.fragment_alumnos) {
                 is Results.Failure -> {
                     binding.pogressBar.isVisible = false
                     Log.d("Live Data", "${result.exception}")
+                    Toast.makeText(requireContext(),getString(R.string.problem_internet),Toast.LENGTH_SHORT).show()
                 }
             }
         })

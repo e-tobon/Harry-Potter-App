@@ -33,7 +33,7 @@
         android:layout_marginTop="12dp"
         android:textSize="12sp"
         android:textStyle="bold"
-
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/cvImageContainer"
         app:layout_constraintTop_toBottomOf="@id/cvImageContainer"
         tools:text="Harry Potter" />
@@ -48,7 +48,8 @@
         app:layout_constraintTop_toBottomOf="@id/tvName"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@id/cvImageContainer"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"/>
 
 
 

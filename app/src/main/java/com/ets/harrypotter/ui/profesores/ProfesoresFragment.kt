@@ -61,6 +61,7 @@ class ProfesoresFragment : Fragment(R.layout.fragment_profesores) {
                 is Results.Failure -> {
                     binding.pvVisible.isVisible = false
                     Log.d("LiveDataP","${result.exception}")
+                    Toast.makeText(requireContext(),getString(R.string.problem_internet),Toast.LENGTH_SHORT).show()
                 }
 
 
