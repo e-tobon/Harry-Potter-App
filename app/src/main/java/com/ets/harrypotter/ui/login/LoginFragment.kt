@@ -23,5 +23,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_selectionFragment)
         }
+        binding.tvCrearCuenta.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registroFragment)
+        }
     }
 }
