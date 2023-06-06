@@ -14,4 +14,10 @@
     <string name="especiee">Especie</string>
     <string name="problem_internet">Ocurrió un problema, verifique su conexión y vuelva a intentar</string>
     <string name="errorRegistro">Lo sentimos, no fue posible crear la cuenta. Vuelva a intetarlo.</string>
+    <string name="passwordLengh">La contraseña debe contar con minimo 6 caracteres</string>
+    <string name="formatEmail">El correo no cumple con el formato</string>
+    <string name="camposVacios">Favor de llenas todos los campos</string>
+    <string name="problema">Ha ocurrido un problema, cuenta invalida. Verifique sus datos o cree una nueva</string>
+    <string name="Info">Ingrese su información</string>
+    <string name="sessionstart">Inicie sesión</string>
 </resources>

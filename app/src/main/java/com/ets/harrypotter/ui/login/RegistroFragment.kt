@@ -36,11 +36,22 @@ class RegistroFragment : Fragment(R.layout.fragment_registro) {
             val password = binding.etPasswordRegister.text.toString()
             val userName = binding.etUserName.text.toString()
 
-            if (!email!!.isEmpty() and  !password!!.isEmpty() ){
-                registroUsuario(userName,email,password)
+            if (!email.isEmpty() and  !password.isEmpty() ){
+
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    Toast.makeText(requireContext(),getString(R.string.formatEmail),Toast.LENGTH_LONG).show()
+                }
+                if(password.length<6){
+                    Toast.makeText(requireContext(),getString(R.string.passwordLengh),Toast.LENGTH_LONG).show()
+                }
+                if(Patterns.EMAIL_ADDRESS.matcher(email).matches() and (password.length > 5)){
+                    registroUsuario(userName,email,password)
+                }
+
+
             }
-            else{
-                Toast.makeText(requireContext(),"${email},${password}",Toast.LENGTH_LONG).show()
+            else if(email.isEmpty() or password.isEmpty() or userName.isEmpty()){
+                Toast.makeText(requireContext(),getString(R.string.camposVacios),Toast.LENGTH_LONG).show()
             }
 
         }
@@ -52,10 +63,10 @@ class RegistroFragment : Fragment(R.layout.fragment_registro) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    val user = auth.currentUser
+
                     Toast.makeText(
                         requireContext(),
-                        "El usario " + userName + " creado con exito!", Toast.LENGTH_SHORT
+                        "El usario $userName creado con exito!", Toast.LENGTH_SHORT
                     ).show()
                     findNavController().navigate(R.id.action_registroFragment_to_loginFragment)
 

@@ -31,12 +31,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            if(email!!.isEmpty()){
-                Toast.makeText(requireContext(), "Ingrese su información", Toast.LENGTH_SHORT).show()
+            if(email.isEmpty()){
+                Toast.makeText(requireContext(), getString(R.string.sessionstart), Toast.LENGTH_SHORT).show()
             }
 
 
-            if(!email!!.isEmpty() and !password.isEmpty()){
+            if(!email.isEmpty() and !password.isEmpty()){
                 loginEmai(email,password)
             }
 
@@ -53,10 +53,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             auth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful){
-                        val user = auth.currentUser
                         findNavController().navigate(R.id.action_loginFragment_to_selectionFragment)
                     }else{
-                        Toast.makeText(requireContext(),"Ha ocurrido un problema, cuenta invalida. Verifique sus datos o cree una nueva",Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(),getString(R.string.problema),Toast.LENGTH_LONG).show()
                     }
                 }
     }
