@@ -25,17 +25,52 @@ class AlumnoDetailFragment : Fragment(R.layout.fragment_alumno_detail) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAlumnoDetailBinding.bind(view)
         binding.tvNombreResult.text = mainViewModel.alumnos.value?.name
-        binding.tvEspecie.text = mainViewModel.alumnos.value?.species
-        binding.tvGenero.text = mainViewModel.alumnos.value?.gender
-        binding.tvCasa.text = mainViewModel.alumnos.value?.house
-        binding.tvNacimiento.text = mainViewModel.alumnos.value?.dateOfBirth
-        Glide.with(requireContext()).load(mainViewModel.alumnos.value?.image)
-            .into(binding.ivImageResult)
-        binding.tvWand.text = mainViewModel.alumnos.value?.wand?.core
-        binding.tvPatronus.text = mainViewModel.alumnos.value?.patronus
 
         if(mainViewModel.alumnos.value!!.alternate_names!!.isNotEmpty()){
             binding.tvNombreAlias.text = mainViewModel.alumnos.value?.alternate_names!![0]
+        }
+
+        if(mainViewModel.alumnos.value!!.image == ""){
+                binding.ivImageResult.setImageResource(R.drawable.ic_alumno)
+            }else{
+            Glide.with(requireContext()).load(mainViewModel.alumnos.value?.image)
+                .into(binding.ivImageResult)
+        }
+
+        if(mainViewModel.alumnos.value!!.wand!!.core == ""){
+            binding.tvWand.text = "Desconocido"
+        }else{
+            binding.tvWand.text = mainViewModel.alumnos.value?.wand?.core
+        }
+
+        if(mainViewModel.alumnos.value!!.species == ""){
+            binding.tvEspecie.text = "Desconocido"
+        }else{
+            binding.tvEspecie.text = mainViewModel.alumnos.value?.species
+        }
+
+        if(mainViewModel.alumnos.value!!.gender == ""){
+            binding.tvGenero.text = "Desconocido"
+        }else{
+            binding.tvGenero.text = mainViewModel.alumnos.value?.gender
+        }
+
+        if(mainViewModel.alumnos.value!!.house == ""){
+            binding.tvCasa.text = "Desconocido"
+        }else{
+            binding.tvCasa.text = mainViewModel.alumnos.value?.house
+        }
+
+        if(mainViewModel.alumnos.value!!.dateOfBirth == null){
+            binding.tvNacimiento.text = "Desconocido"
+        }else{
+            binding.tvNacimiento.text = mainViewModel.alumnos.value?.dateOfBirth
+        }
+
+        if(mainViewModel.alumnos.value!!.patronus == ""){
+            binding.tvPatronus.text = "Desconocido"
+        }else{
+            binding.tvPatronus.text = mainViewModel.alumnos.value?.patronus
         }
 
     }

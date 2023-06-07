@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.ets.harrypotter.R
 import com.ets.harrypotter.data.model.HpAlumno
 import com.ets.harrypotter.databinding.AlumnoItemBinding
 
@@ -30,11 +32,18 @@ class AlumnoAdapter(private val context: Context, private val alumnoList:List<Hp
         holder.tvNombre.text = alumnoList[position].name
         holder.tvActor.text = alumnoList[position].actor
         holder.tvHouse.text = alumnoList[position].house
-        Glide.with(context).load(alumnoList[position].image)
-            .into(holder.ivImagen)
+        if(alumnoList[position].image == ""){
+            holder.ivImagen.setImageResource(R.drawable.ic_alumno)
+        }
+        else{
+            Glide.with(context).load(alumnoList[position].image)
+                .into(holder.ivImagen)
+        }
+
         holder.itemView.setOnClickListener {
             alumnoClick(alumnoList[position])
         }
+
 
     }
 }

@@ -16,9 +16,11 @@ class MainViewModel: ViewModel() {
     val profesor:LiveData<HpProfesor>
     get() = _profesor
 
+
     fun setAlumnos(alumno: HpAlumno){
         _alumnos.value = alumno
     }
+
 
     fun setProfesores(profesor: HpProfesor){
         _profesor.value = profesor

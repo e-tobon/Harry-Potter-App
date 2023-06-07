@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ets.harrypotter.R
 import com.ets.harrypotter.data.model.HpProfesor
 import com.ets.harrypotter.databinding.ProfesorItemBinding
 
@@ -28,8 +29,13 @@ class ProfesresAdapter(private val context: Context,private val listProfesores:L
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvNombreProfesor.text = listProfesores[position].name
         holder.tvActor.text = listProfesores[position].actor
-        Glide.with(context).load(listProfesores[position].image)
-            .into(holder.ivImagenProfesor)
+        if(listProfesores[position].image == ""){
+            holder.ivImagenProfesor.setImageResource(R.drawable.ic_profesores_minerva)
+        }else{
+            Glide.with(context).load(listProfesores[position].image)
+                .into(holder.ivImagenProfesor)
+        }
+
         holder.itemView.setOnClickListener {
             profesorClick(listProfesores[position])
         }
