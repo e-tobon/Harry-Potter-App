@@ -29,7 +29,7 @@ class ProfDetailFragment : Fragment(R.layout.fragment_prof_detail) {
         binding.tvNombreResult.text = mainViewModel.profesor.value?.name.toString()
 
 
-        
+
 
         if(mainViewModel.profesor.value!!.image == ""){
             binding.ivImageResult.setImageResource(R.drawable.ic_profesores_minerva)
