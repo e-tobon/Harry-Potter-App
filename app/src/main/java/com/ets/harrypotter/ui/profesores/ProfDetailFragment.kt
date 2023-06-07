@@ -25,15 +25,54 @@ class ProfDetailFragment : Fragment(R.layout.fragment_prof_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfDetailBinding.bind(view)
-        binding.tvEspecie.text = mainViewModel.profesor.value?.species.toString()
+
         binding.tvNombreResult.text = mainViewModel.profesor.value?.name.toString()
-        binding.tvCasa.text = mainViewModel.profesor.value?.house
-        binding.tvGenero.text = mainViewModel.profesor.value?.gender
-        binding.tvNacimiento.text = mainViewModel.profesor.value?.dateOfBirth
-        binding.tvWand.text = mainViewModel.profesor.value?.wand?.core
-        binding.tvPatronus.text = mainViewModel.profesor.value?.patronus
-        Glide.with(requireContext()).load(mainViewModel.profesor.value?.image)
-            .into(binding.ivImageResult)
+
+
+        
+
+        if(mainViewModel.profesor.value!!.image == ""){
+            binding.ivImageResult.setImageResource(R.drawable.ic_profesores_minerva)
+        }else{
+            Glide.with(requireContext()).load(mainViewModel.profesor.value?.image)
+                .into(binding.ivImageResult)
+        }
+
+        if(mainViewModel.profesor.value!!.wand!!.core == ""){
+            binding.tvWand.text = "Desconocido"
+        }else{
+            binding.tvWand.text = mainViewModel.profesor.value?.wand?.core
+        }
+
+        if(mainViewModel.profesor.value!!.species == ""){
+            binding.tvEspecie.text = "Desconocido"
+        }else{
+            binding.tvEspecie.text = mainViewModel.profesor.value?.species.toString()
+        }
+
+        if(mainViewModel.profesor.value!!.gender == ""){
+            binding.tvGenero.text = "Desconocido"
+        }else{
+            binding.tvGenero.text = mainViewModel.profesor.value?.gender
+        }
+
+        if(mainViewModel.profesor.value!!.house == ""){
+            binding.tvCasa.text = "Desconocido"
+        }else{
+            binding.tvCasa.text = mainViewModel.profesor.value?.house
+        }
+
+        if(mainViewModel.profesor.value!!.dateOfBirth == null){
+            binding.tvNacimiento.text = "Desconocido"
+        }else{
+            binding.tvNacimiento.text = mainViewModel.profesor.value?.dateOfBirth
+        }
+
+        if(mainViewModel.profesor.value!!.patronus == ""){
+            binding.tvPatronus.text = "Desconocido"
+        }else{
+            binding.tvPatronus.text = mainViewModel.profesor.value?.patronus
+        }
 
 
     }
