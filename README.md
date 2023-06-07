@@ -5,11 +5,11 @@ Aplicación para visualizar a los alumnos y profesores de la saga de películas 
 min SDK: 23
 
 ##En esta app se implento:
---Patron de arquitectura MVV
+--Patron de arquitectura MVVM
 --Uso de API https://hp-api.onrender.com/ con Retrofit
 --Navigation Component
 --Patrones de diseño (Creacionales)
---Autenticación con correo conFIREBASE
+--Autenticación con correo con FIREBASE
 
 ##Se utlizaron las siguientes librerias
 
